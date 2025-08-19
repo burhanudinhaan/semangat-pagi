@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kata-Kata Semangat ✨</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      text-align: center;
+      background: linear-gradient(135deg, #1f1c2c, #928dab);
+      color: #fff;
+      padding: 50px 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .card {
+      background: rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+      margin: 20px auto;
+      width: 90%;
+      max-width: 450px;
+      font-size: 18px;
+      line-height: 1.6;
+      animation: slideIn 1s ease-out;
+    }
+    button {
+      background: linear-gradient(to right, #ff416c, #ff4b2b);
+      border: none;
+      padding: 12px 25px;
+      color: white;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    @keyframes slideIn {
+      from {transform: translateY(50px); opacity: 0;}
+      to {transform: translateY(0); opacity: 1;}
+    }
+  </style>
+</head>
+<body>
+  <h1>💪 Semangat Hidup & Move On 💫</h1>
+  <div class="card">
+    <p id="semangat">Klik tombol di bawah untuk dapat kata-kata semangat ✨</p>
+    <button onclick="beriSemangat()">Kasih Semangat!</button>
+  </div>
+
+  <script>
+    const semangat = [
+      "Jangan biarkan masa lalu mengikatmu, masa depanmu jauh lebih indah. 🌈",
+      "Move on itu bukan lupa, tapi belajar ikhlas dan melangkah lebih kuat. 💪",
+      "Setiap luka adalah guru, dan setiap hari adalah kesempatan baru. ✨",
+      "Hidup ini singkat, jangan buang waktu untuk orang yang nggak menghargaimu. 🚀",
+      "Percaya deh, Tuhan sedang menyiapkan yang lebih baik dari apa yang hilang. 🙏",
+      "Kalau jatuh cinta itu bikin sakit, berarti kamu sedang disiapkan untuk cinta yang lebih sehat. ❤️",
+      "Jangan takut sendirian, kadang kesendirian adalah jalan menuju versi terbaik dirimu. 🌟"
+    ];
+
+    function beriSemangat() {
+      let random = Math.floor(Math.random() * semangat.length);
+      document.getElementById("semangat").innerText = semangat[random];
+    }
+  </script>
+</body>
+</html>
